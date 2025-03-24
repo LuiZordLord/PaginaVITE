@@ -13,17 +13,22 @@ function Sidebar() {
   }
 
   function generateRandomOperator() {
-    const operators = ["+", "-", "×", "÷"]; // Possiveis operações
+    const operators = ["+", "-", "×", "÷"]; // Possíveis operações
     return operators[Math.floor(Math.random() * operators.length)];
   }
 
   function calculateAnswer() {
     switch (operator) {
-      case "+": return num1 + num2;
-      case "-": return num1 - num2;
-      case "×": return num1 * num2;
-      case "÷": return (num1 / num2).toFixed(2); // Arredondamento para 2 casas
-      default: return 0;
+      case "+":
+        return num1 + num2;
+      case "-":
+        return num1 - num2;
+      case "×":
+        return num1 * num2;
+      case "÷":
+        return (num1 / num2).toFixed(2); // Arredondamento para 2 casas
+      default:
+        return 0;
     }
   }
 
@@ -32,11 +37,7 @@ function Sidebar() {
       setScore(score + 1);
       resetGame();
     } else {
-<<<<<<< HEAD
       alert("Resposta incorreta! Tente novamente.");
-=======
-      alert("Resposta incorreta! Tente novamente."); //Se errar a conta
->>>>>>> 8696334 (Atualização)
     }
   }
 
@@ -48,23 +49,6 @@ function Sidebar() {
   }
 
   return (
-<<<<<<< HEAD
-    <div className="sidebar">
-      <h2>Você tem {score} pontos</h2>
-      <button onClick={resetGame}>Sortear Desafio</button>
-      <p>
-        Quanto é: {num1} {operator} {num2} ?
-      </p>
-      <input
-        type="number"
-        value={userAnswer}
-        onChange={(e) => setUserAnswer(e.target.value)}
-      />
-      <button onClick={checkAnswer}>Validar</button>
-      <button onClick={() => setScore(0)}>Novo Jogo</button>
-    </div>
-  );
-=======
     <div className="sidebar-container">
       <div className="sidebar">
         <h2>Você tem {score} pontos</h2>
@@ -82,8 +66,6 @@ function Sidebar() {
       </div>
     </div>
   );
-  
->>>>>>> 8696334 (Atualização)
 }
 
 export default Sidebar;
